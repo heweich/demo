@@ -1,0 +1,663 @@
+WARNING 2018-10-16 09:07:41,045 views 6024 10436 首页开始运行了……
+WARNING 2018-10-16 09:09:07,741 views 6024 13288 首页开始运行了……
+WARNING 2018-10-16 10:40:02,676 views 6024 14836 首页开始运行了……
+DEBUG 2018-10-16 15:18:30,938 utils 11504 8644 (0.004) SELECT @@SQL_AUTO_IS_NULL; args=None
+DEBUG 2018-10-16 15:18:30,940 utils 11504 8644 (0.002) SELECT VERSION(); args=None
+DEBUG 2018-10-16 15:18:31,497 utils 11504 8644 (0.072) SHOW FULL TABLES; args=None
+DEBUG 2018-10-16 15:18:31,527 utils 11504 8644 (0.014) SELECT `django_migrations`.`app`, `django_migrations`.`name` FROM `django_migrations`; args=()
+DEBUG 2018-10-16 15:18:35,696 base 11504 11060 Exception while resolving variable 'name' in template 'unknown'.
+Traceback (most recent call last):
+  File "D:\py-django\lib\site-packages\django\core\handlers\exception.py", line 41, in inner
+    response = get_response(request)
+  File "D:\py-django\lib\site-packages\django\core\handlers\base.py", line 172, in _get_response
+    resolver_match = resolver.resolve(request.path_info)
+  File "D:\py-django\lib\site-packages\django\urls\resolvers.py", line 392, in resolve
+    raise Resolver404({'tried': tried, 'path': new_path})
+django.urls.exceptions.Resolver404: {'tried': [[<RegexURLResolver <RegexURLPattern list> (admin:admin) ^admin/>], [<RegexURLResolver <module 'demo.urls' from 'D:\\py-django\\days58\\demo_01\\demo\\urls.py'> (None:demo) ^demo/>], [<RegexURLResolver <module 'DjangoUeditor.urls' from 'D:\\py-django\\lib\\site-packages\\DjangoUeditor\\urls.py'> (None:None) ^ueditor/>]], 'path': ''}
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\py-django\lib\site-packages\django\template\base.py", line 882, in _resolve_lookup
+    current = current[bit]
+TypeError: 'RegexURLResolver' object is not subscriptable
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\py-django\lib\site-packages\django\template\base.py", line 890, in _resolve_lookup
+    current = getattr(current, bit)
+AttributeError: 'RegexURLResolver' object has no attribute 'name'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\py-django\lib\site-packages\django\template\base.py", line 896, in _resolve_lookup
+    current = current[int(bit)]
+ValueError: invalid literal for int() with base 10: 'name'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\py-django\lib\site-packages\django\template\base.py", line 903, in _resolve_lookup
+    (bit, current))  # missing attribute
+django.template.base.VariableDoesNotExist: Failed lookup for key [name] in '<RegexURLResolver <RegexURLPattern list> (admin:admin) ^admin/>'
+DEBUG 2018-10-16 15:18:35,776 base 11504 11060 Exception while resolving variable 'name' in template 'unknown'.
+Traceback (most recent call last):
+  File "D:\py-django\lib\site-packages\django\core\handlers\exception.py", line 41, in inner
+    response = get_response(request)
+  File "D:\py-django\lib\site-packages\django\core\handlers\base.py", line 172, in _get_response
+    resolver_match = resolver.resolve(request.path_info)
+  File "D:\py-django\lib\site-packages\django\urls\resolvers.py", line 392, in resolve
+    raise Resolver404({'tried': tried, 'path': new_path})
+django.urls.exceptions.Resolver404: {'tried': [[<RegexURLResolver <RegexURLPattern list> (admin:admin) ^admin/>], [<RegexURLResolver <module 'demo.urls' from 'D:\\py-django\\days58\\demo_01\\demo\\urls.py'> (None:demo) ^demo/>], [<RegexURLResolver <module 'DjangoUeditor.urls' from 'D:\\py-django\\lib\\site-packages\\DjangoUeditor\\urls.py'> (None:None) ^ueditor/>]], 'path': ''}
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\py-django\lib\site-packages\django\template\base.py", line 882, in _resolve_lookup
+    current = current[bit]
+TypeError: 'RegexURLResolver' object is not subscriptable
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\py-django\lib\site-packages\django\template\base.py", line 890, in _resolve_lookup
+    current = getattr(current, bit)
+AttributeError: 'RegexURLResolver' object has no attribute 'name'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\py-django\lib\site-packages\django\template\base.py", line 896, in _resolve_lookup
+    current = current[int(bit)]
+ValueError: invalid literal for int() with base 10: 'name'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\py-django\lib\site-packages\django\template\base.py", line 903, in _resolve_lookup
+    (bit, current))  # missing attribute
+django.template.base.VariableDoesNotExist: Failed lookup for key [name] in "<RegexURLResolver <module 'demo.urls' from 'D:\\\\py-django\\\\days58\\\\demo_01\\\\demo\\\\urls.py'> (None:demo) ^demo/>"
+DEBUG 2018-10-16 15:18:35,779 base 11504 11060 Exception while resolving variable 'name' in template 'unknown'.
+Traceback (most recent call last):
+  File "D:\py-django\lib\site-packages\django\core\handlers\exception.py", line 41, in inner
+    response = get_response(request)
+  File "D:\py-django\lib\site-packages\django\core\handlers\base.py", line 172, in _get_response
+    resolver_match = resolver.resolve(request.path_info)
+  File "D:\py-django\lib\site-packages\django\urls\resolvers.py", line 392, in resolve
+    raise Resolver404({'tried': tried, 'path': new_path})
+django.urls.exceptions.Resolver404: {'tried': [[<RegexURLResolver <RegexURLPattern list> (admin:admin) ^admin/>], [<RegexURLResolver <module 'demo.urls' from 'D:\\py-django\\days58\\demo_01\\demo\\urls.py'> (None:demo) ^demo/>], [<RegexURLResolver <module 'DjangoUeditor.urls' from 'D:\\py-django\\lib\\site-packages\\DjangoUeditor\\urls.py'> (None:None) ^ueditor/>]], 'path': ''}
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\py-django\lib\site-packages\django\template\base.py", line 882, in _resolve_lookup
+    current = current[bit]
+TypeError: 'RegexURLResolver' object is not subscriptable
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\py-django\lib\site-packages\django\template\base.py", line 890, in _resolve_lookup
+    current = getattr(current, bit)
+AttributeError: 'RegexURLResolver' object has no attribute 'name'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\py-django\lib\site-packages\django\template\base.py", line 896, in _resolve_lookup
+    current = current[int(bit)]
+ValueError: invalid literal for int() with base 10: 'name'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\py-django\lib\site-packages\django\template\base.py", line 903, in _resolve_lookup
+    (bit, current))  # missing attribute
+django.template.base.VariableDoesNotExist: Failed lookup for key [name] in "<RegexURLResolver <module 'DjangoUeditor.urls' from 'D:\\\\py-django\\\\lib\\\\site-packages\\\\DjangoUeditor\\\\urls.py'> (None:None) ^ueditor/>"
+WARNING 2018-10-16 15:18:35,782 base 11504 11060 Not Found: /
+WARNING 2018-10-16 15:18:35,784 basehttp 11504 11060 "GET / HTTP/1.1" 404 2127
+DEBUG 2018-10-16 15:18:43,088 base 11504 6456 Exception while resolving variable 'page' in template 'demo/show_index.html'.
+Traceback (most recent call last):
+  File "D:\py-django\lib\site-packages\django\template\base.py", line 882, in _resolve_lookup
+    current = current[bit]
+  File "D:\py-django\lib\site-packages\django\template\context.py", line 87, in __getitem__
+    raise KeyError(key)
+KeyError: 'page'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\py-django\lib\site-packages\django\template\base.py", line 888, in _resolve_lookup
+    if isinstance(current, BaseContext) and getattr(type(current), bit):
+AttributeError: type object 'RequestContext' has no attribute 'page'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\py-django\lib\site-packages\django\template\base.py", line 896, in _resolve_lookup
+    current = current[int(bit)]
+ValueError: invalid literal for int() with base 10: 'page'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\py-django\lib\site-packages\django\template\base.py", line 903, in _resolve_lookup
+    (bit, current))  # missing attribute
+django.template.base.VariableDoesNotExist: Failed lookup for key [page] in '[{\'True\': True, \'False\': False, \'None\': None}, {\'csrf_token\': <SimpleLazyObject: <function csrf.<locals>._get_val at 0x000002A132C4FAE8>>, \'request\': <WSGIRequest: GET \'/demo/show_index/\'>, \'user\': <SimpleLazyObject: <function AuthenticationMiddleware.process_request.<locals>.<lambda> at 0x000002A132C3DD90>>, \'perms\': <django.contrib.auth.context_processors.PermWrapper object at 0x000002A132C1FB38>, \'messages\': <django.contrib.messages.storage.fallback.FallbackStorage object at 0x000002A132C0DD68>, \'DEFAULT_MESSAGE_LEVELS\': {\'DEBUG\': 10, \'INFO\': 20, \'SUCCESS\': 25, \'WARNING\': 30, \'ERROR\': 40}}, {}, {\'block\': <Block Node: show_article. Contents: [<TextNode: \'\\n<div class="container">\\n\'>, <For Node: for at in page.object_list, tail_len: 9>, <TextNode: \'\\n                    </di\'>, <IfNode>, <TextNode: \'\\n\\n                       \'>, <IfNode>, <TextNode: \'\\n\\n                       \'>, <For Node: for p in page.paginator.page_range, tail_len: 5>, <TextNode: \'\\n\\n                       \'>, <IfNode>, <TextNode: \'\\n                        \'>, <IfNode>, <TextNode: \'\\n                      </\'>]>}, {}]'
+DEBUG 2018-10-16 15:18:43,108 base 11504 6456 Exception while resolving variable 'page' in template 'demo/show_index.html'.
+Traceback (most recent call last):
+  File "D:\py-django\lib\site-packages\django\template\base.py", line 882, in _resolve_lookup
+    current = current[bit]
+  File "D:\py-django\lib\site-packages\django\template\context.py", line 87, in __getitem__
+    raise KeyError(key)
+KeyError: 'page'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\py-django\lib\site-packages\django\template\base.py", line 888, in _resolve_lookup
+    if isinstance(current, BaseContext) and getattr(type(current), bit):
+AttributeError: type object 'RequestContext' has no attribute 'page'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\py-django\lib\site-packages\django\template\base.py", line 896, in _resolve_lookup
+    current = current[int(bit)]
+ValueError: invalid literal for int() with base 10: 'page'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\py-django\lib\site-packages\django\template\base.py", line 903, in _resolve_lookup
+    (bit, current))  # missing attribute
+django.template.base.VariableDoesNotExist: Failed lookup for key [page] in '[{\'True\': True, \'False\': False, \'None\': None}, {\'csrf_token\': <SimpleLazyObject: <function csrf.<locals>._get_val at 0x000002A132C4FAE8>>, \'request\': <WSGIRequest: GET \'/demo/show_index/\'>, \'user\': <SimpleLazyObject: <function AuthenticationMiddleware.process_request.<locals>.<lambda> at 0x000002A132C3DD90>>, \'perms\': <django.contrib.auth.context_processors.PermWrapper object at 0x000002A132C1FB38>, \'messages\': <django.contrib.messages.storage.fallback.FallbackStorage object at 0x000002A132C0DD68>, \'DEFAULT_MESSAGE_LEVELS\': {\'DEBUG\': 10, \'INFO\': 20, \'SUCCESS\': 25, \'WARNING\': 30, \'ERROR\': 40}}, {}, {\'block\': <Block Node: show_article. Contents: [<TextNode: \'\\n<div class="container">\\n\'>, <For Node: for at in page.object_list, tail_len: 9>, <TextNode: \'\\n                    </di\'>, <IfNode>, <TextNode: \'\\n\\n                       \'>, <IfNode>, <TextNode: \'\\n\\n                       \'>, <For Node: for p in page.paginator.page_range, tail_len: 5>, <TextNode: \'\\n\\n                       \'>, <IfNode>, <TextNode: \'\\n                        \'>, <IfNode>, <TextNode: \'\\n                      </\'>]>}]'
+DEBUG 2018-10-16 15:18:43,111 base 11504 6456 Exception while resolving variable 'page' in template 'demo/show_index.html'.
+Traceback (most recent call last):
+  File "D:\py-django\lib\site-packages\django\template\base.py", line 882, in _resolve_lookup
+    current = current[bit]
+  File "D:\py-django\lib\site-packages\django\template\context.py", line 87, in __getitem__
+    raise KeyError(key)
+KeyError: 'page'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\py-django\lib\site-packages\django\template\base.py", line 888, in _resolve_lookup
+    if isinstance(current, BaseContext) and getattr(type(current), bit):
+AttributeError: type object 'RequestContext' has no attribute 'page'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\py-django\lib\site-packages\django\template\base.py", line 896, in _resolve_lookup
+    current = current[int(bit)]
+ValueError: invalid literal for int() with base 10: 'page'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\py-django\lib\site-packages\django\template\base.py", line 903, in _resolve_lookup
+    (bit, current))  # missing attribute
+django.template.base.VariableDoesNotExist: Failed lookup for key [page] in '[{\'True\': True, \'False\': False, \'None\': None}, {\'csrf_token\': <SimpleLazyObject: <function csrf.<locals>._get_val at 0x000002A132C4FAE8>>, \'request\': <WSGIRequest: GET \'/demo/show_index/\'>, \'user\': <SimpleLazyObject: <function AuthenticationMiddleware.process_request.<locals>.<lambda> at 0x000002A132C3DD90>>, \'perms\': <django.contrib.auth.context_processors.PermWrapper object at 0x000002A132C1FB38>, \'messages\': <django.contrib.messages.storage.fallback.FallbackStorage object at 0x000002A132C0DD68>, \'DEFAULT_MESSAGE_LEVELS\': {\'DEBUG\': 10, \'INFO\': 20, \'SUCCESS\': 25, \'WARNING\': 30, \'ERROR\': 40}}, {}, {\'block\': <Block Node: show_article. Contents: [<TextNode: \'\\n<div class="container">\\n\'>, <For Node: for at in page.object_list, tail_len: 9>, <TextNode: \'\\n                    </di\'>, <IfNode>, <TextNode: \'\\n\\n                       \'>, <IfNode>, <TextNode: \'\\n\\n                       \'>, <For Node: for p in page.paginator.page_range, tail_len: 5>, <TextNode: \'\\n\\n                       \'>, <IfNode>, <TextNode: \'\\n                        \'>, <IfNode>, <TextNode: \'\\n                      </\'>]>}]'
+DEBUG 2018-10-16 15:18:43,113 base 11504 6456 Exception while resolving variable 'page' in template 'demo/show_index.html'.
+Traceback (most recent call last):
+  File "D:\py-django\lib\site-packages\django\template\base.py", line 882, in _resolve_lookup
+    current = current[bit]
+  File "D:\py-django\lib\site-packages\django\template\context.py", line 87, in __getitem__
+    raise KeyError(key)
+KeyError: 'page'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\py-django\lib\site-packages\django\template\base.py", line 888, in _resolve_lookup
+    if isinstance(current, BaseContext) and getattr(type(current), bit):
+AttributeError: type object 'RequestContext' has no attribute 'page'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\py-django\lib\site-packages\django\template\base.py", line 896, in _resolve_lookup
+    current = current[int(bit)]
+ValueError: invalid literal for int() with base 10: 'page'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\py-django\lib\site-packages\django\template\base.py", line 903, in _resolve_lookup
+    (bit, current))  # missing attribute
+django.template.base.VariableDoesNotExist: Failed lookup for key [page] in '[{\'True\': True, \'False\': False, \'None\': None}, {\'csrf_token\': <SimpleLazyObject: <function csrf.<locals>._get_val at 0x000002A132C4FAE8>>, \'request\': <WSGIRequest: GET \'/demo/show_index/\'>, \'user\': <SimpleLazyObject: <function AuthenticationMiddleware.process_request.<locals>.<lambda> at 0x000002A132C3DD90>>, \'perms\': <django.contrib.auth.context_processors.PermWrapper object at 0x000002A132C1FB38>, \'messages\': <django.contrib.messages.storage.fallback.FallbackStorage object at 0x000002A132C0DD68>, \'DEFAULT_MESSAGE_LEVELS\': {\'DEBUG\': 10, \'INFO\': 20, \'SUCCESS\': 25, \'WARNING\': 30, \'ERROR\': 40}}, {}, {\'block\': <Block Node: show_article. Contents: [<TextNode: \'\\n<div class="container">\\n\'>, <For Node: for at in page.object_list, tail_len: 9>, <TextNode: \'\\n                    </di\'>, <IfNode>, <TextNode: \'\\n\\n                       \'>, <IfNode>, <TextNode: \'\\n\\n                       \'>, <For Node: for p in page.paginator.page_range, tail_len: 5>, <TextNode: \'\\n\\n                       \'>, <IfNode>, <TextNode: \'\\n                        \'>, <IfNode>, <TextNode: \'\\n                      </\'>]>}, {}]'
+DEBUG 2018-10-16 15:18:43,115 base 11504 6456 Exception while resolving variable 'page' in template 'demo/show_index.html'.
+Traceback (most recent call last):
+  File "D:\py-django\lib\site-packages\django\template\base.py", line 882, in _resolve_lookup
+    current = current[bit]
+  File "D:\py-django\lib\site-packages\django\template\context.py", line 87, in __getitem__
+    raise KeyError(key)
+KeyError: 'page'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\py-django\lib\site-packages\django\template\base.py", line 888, in _resolve_lookup
+    if isinstance(current, BaseContext) and getattr(type(current), bit):
+AttributeError: type object 'RequestContext' has no attribute 'page'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\py-django\lib\site-packages\django\template\base.py", line 896, in _resolve_lookup
+    current = current[int(bit)]
+ValueError: invalid literal for int() with base 10: 'page'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\py-django\lib\site-packages\django\template\base.py", line 903, in _resolve_lookup
+    (bit, current))  # missing attribute
+django.template.base.VariableDoesNotExist: Failed lookup for key [page] in '[{\'True\': True, \'False\': False, \'None\': None}, {\'csrf_token\': <SimpleLazyObject: <function csrf.<locals>._get_val at 0x000002A132C4FAE8>>, \'request\': <WSGIRequest: GET \'/demo/show_index/\'>, \'user\': <SimpleLazyObject: <function AuthenticationMiddleware.process_request.<locals>.<lambda> at 0x000002A132C3DD90>>, \'perms\': <django.contrib.auth.context_processors.PermWrapper object at 0x000002A132C1FB38>, \'messages\': <django.contrib.messages.storage.fallback.FallbackStorage object at 0x000002A132C0DD68>, \'DEFAULT_MESSAGE_LEVELS\': {\'DEBUG\': 10, \'INFO\': 20, \'SUCCESS\': 25, \'WARNING\': 30, \'ERROR\': 40}}, {}, {\'block\': <Block Node: show_article. Contents: [<TextNode: \'\\n<div class="container">\\n\'>, <For Node: for at in page.object_list, tail_len: 9>, <TextNode: \'\\n                    </di\'>, <IfNode>, <TextNode: \'\\n\\n                       \'>, <IfNode>, <TextNode: \'\\n\\n                       \'>, <For Node: for p in page.paginator.page_range, tail_len: 5>, <TextNode: \'\\n\\n                       \'>, <IfNode>, <TextNode: \'\\n                        \'>, <IfNode>, <TextNode: \'\\n                      </\'>]>}]'
+DEBUG 2018-10-16 15:18:43,117 base 11504 6456 Exception while resolving variable 'page' in template 'demo/show_index.html'.
+Traceback (most recent call last):
+  File "D:\py-django\lib\site-packages\django\template\base.py", line 882, in _resolve_lookup
+    current = current[bit]
+  File "D:\py-django\lib\site-packages\django\template\context.py", line 87, in __getitem__
+    raise KeyError(key)
+KeyError: 'page'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\py-django\lib\site-packages\django\template\base.py", line 888, in _resolve_lookup
+    if isinstance(current, BaseContext) and getattr(type(current), bit):
+AttributeError: type object 'RequestContext' has no attribute 'page'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\py-django\lib\site-packages\django\template\base.py", line 896, in _resolve_lookup
+    current = current[int(bit)]
+ValueError: invalid literal for int() with base 10: 'page'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\py-django\lib\site-packages\django\template\base.py", line 903, in _resolve_lookup
+    (bit, current))  # missing attribute
+django.template.base.VariableDoesNotExist: Failed lookup for key [page] in '[{\'True\': True, \'False\': False, \'None\': None}, {\'csrf_token\': <SimpleLazyObject: <function csrf.<locals>._get_val at 0x000002A132C4FAE8>>, \'request\': <WSGIRequest: GET \'/demo/show_index/\'>, \'user\': <SimpleLazyObject: <function AuthenticationMiddleware.process_request.<locals>.<lambda> at 0x000002A132C3DD90>>, \'perms\': <django.contrib.auth.context_processors.PermWrapper object at 0x000002A132C1FB38>, \'messages\': <django.contrib.messages.storage.fallback.FallbackStorage object at 0x000002A132C0DD68>, \'DEFAULT_MESSAGE_LEVELS\': {\'DEBUG\': 10, \'INFO\': 20, \'SUCCESS\': 25, \'WARNING\': 30, \'ERROR\': 40}}, {}, {\'block\': <Block Node: show_article. Contents: [<TextNode: \'\\n<div class="container">\\n\'>, <For Node: for at in page.object_list, tail_len: 9>, <TextNode: \'\\n                    </di\'>, <IfNode>, <TextNode: \'\\n\\n                       \'>, <IfNode>, <TextNode: \'\\n\\n                       \'>, <For Node: for p in page.paginator.page_range, tail_len: 5>, <TextNode: \'\\n\\n                       \'>, <IfNode>, <TextNode: \'\\n                        \'>, <IfNode>, <TextNode: \'\\n                      </\'>]>}]'
+INFO 2018-10-16 15:18:43,121 basehttp 11504 6456 "GET /demo/show_index/ HTTP/1.1" 200 10149
+DEBUG 2018-10-16 15:18:44,129 base 11504 5160 Exception while resolving variable 'name' in template 'unknown'.
+Traceback (most recent call last):
+  File "D:\py-django\lib\site-packages\django\core\handlers\exception.py", line 41, in inner
+    response = get_response(request)
+  File "D:\py-django\lib\site-packages\django\core\handlers\base.py", line 172, in _get_response
+    resolver_match = resolver.resolve(request.path_info)
+  File "D:\py-django\lib\site-packages\django\urls\resolvers.py", line 392, in resolve
+    raise Resolver404({'tried': tried, 'path': new_path})
+django.urls.exceptions.Resolver404: {'tried': [[<RegexURLResolver <RegexURLPattern list> (admin:admin) ^admin/>], [<RegexURLResolver <module 'demo.urls' from 'D:\\py-django\\days58\\demo_01\\demo\\urls.py'> (None:demo) ^demo/>], [<RegexURLResolver <module 'DjangoUeditor.urls' from 'D:\\py-django\\lib\\site-packages\\DjangoUeditor\\urls.py'> (None:None) ^ueditor/>]], 'path': 'favicon.ico'}
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\py-django\lib\site-packages\django\template\base.py", line 882, in _resolve_lookup
+    current = current[bit]
+TypeError: 'RegexURLResolver' object is not subscriptable
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\py-django\lib\site-packages\django\template\base.py", line 890, in _resolve_lookup
+    current = getattr(current, bit)
+AttributeError: 'RegexURLResolver' object has no attribute 'name'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\py-django\lib\site-packages\django\template\base.py", line 896, in _resolve_lookup
+    current = current[int(bit)]
+ValueError: invalid literal for int() with base 10: 'name'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\py-django\lib\site-packages\django\template\base.py", line 903, in _resolve_lookup
+    (bit, current))  # missing attribute
+django.template.base.VariableDoesNotExist: Failed lookup for key [name] in '<RegexURLResolver <RegexURLPattern list> (admin:admin) ^admin/>'
+DEBUG 2018-10-16 15:18:44,132 base 11504 5160 Exception while resolving variable 'name' in template 'unknown'.
+Traceback (most recent call last):
+  File "D:\py-django\lib\site-packages\django\core\handlers\exception.py", line 41, in inner
+    response = get_response(request)
+  File "D:\py-django\lib\site-packages\django\core\handlers\base.py", line 172, in _get_response
+    resolver_match = resolver.resolve(request.path_info)
+  File "D:\py-django\lib\site-packages\django\urls\resolvers.py", line 392, in resolve
+    raise Resolver404({'tried': tried, 'path': new_path})
+django.urls.exceptions.Resolver404: {'tried': [[<RegexURLResolver <RegexURLPattern list> (admin:admin) ^admin/>], [<RegexURLResolver <module 'demo.urls' from 'D:\\py-django\\days58\\demo_01\\demo\\urls.py'> (None:demo) ^demo/>], [<RegexURLResolver <module 'DjangoUeditor.urls' from 'D:\\py-django\\lib\\site-packages\\DjangoUeditor\\urls.py'> (None:None) ^ueditor/>]], 'path': 'favicon.ico'}
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\py-django\lib\site-packages\django\template\base.py", line 882, in _resolve_lookup
+    current = current[bit]
+TypeError: 'RegexURLResolver' object is not subscriptable
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\py-django\lib\site-packages\django\template\base.py", line 890, in _resolve_lookup
+    current = getattr(current, bit)
+AttributeError: 'RegexURLResolver' object has no attribute 'name'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\py-django\lib\site-packages\django\template\base.py", line 896, in _resolve_lookup
+    current = current[int(bit)]
+ValueError: invalid literal for int() with base 10: 'name'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\py-django\lib\site-packages\django\template\base.py", line 903, in _resolve_lookup
+    (bit, current))  # missing attribute
+django.template.base.VariableDoesNotExist: Failed lookup for key [name] in "<RegexURLResolver <module 'demo.urls' from 'D:\\\\py-django\\\\days58\\\\demo_01\\\\demo\\\\urls.py'> (None:demo) ^demo/>"
+DEBUG 2018-10-16 15:18:44,135 base 11504 5160 Exception while resolving variable 'name' in template 'unknown'.
+Traceback (most recent call last):
+  File "D:\py-django\lib\site-packages\django\core\handlers\exception.py", line 41, in inner
+    response = get_response(request)
+  File "D:\py-django\lib\site-packages\django\core\handlers\base.py", line 172, in _get_response
+    resolver_match = resolver.resolve(request.path_info)
+  File "D:\py-django\lib\site-packages\django\urls\resolvers.py", line 392, in resolve
+    raise Resolver404({'tried': tried, 'path': new_path})
+django.urls.exceptions.Resolver404: {'tried': [[<RegexURLResolver <RegexURLPattern list> (admin:admin) ^admin/>], [<RegexURLResolver <module 'demo.urls' from 'D:\\py-django\\days58\\demo_01\\demo\\urls.py'> (None:demo) ^demo/>], [<RegexURLResolver <module 'DjangoUeditor.urls' from 'D:\\py-django\\lib\\site-packages\\DjangoUeditor\\urls.py'> (None:None) ^ueditor/>]], 'path': 'favicon.ico'}
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\py-django\lib\site-packages\django\template\base.py", line 882, in _resolve_lookup
+    current = current[bit]
+TypeError: 'RegexURLResolver' object is not subscriptable
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\py-django\lib\site-packages\django\template\base.py", line 890, in _resolve_lookup
+    current = getattr(current, bit)
+AttributeError: 'RegexURLResolver' object has no attribute 'name'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\py-django\lib\site-packages\django\template\base.py", line 896, in _resolve_lookup
+    current = current[int(bit)]
+ValueError: invalid literal for int() with base 10: 'name'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\py-django\lib\site-packages\django\template\base.py", line 903, in _resolve_lookup
+    (bit, current))  # missing attribute
+django.template.base.VariableDoesNotExist: Failed lookup for key [name] in "<RegexURLResolver <module 'DjangoUeditor.urls' from 'D:\\\\py-django\\\\lib\\\\site-packages\\\\DjangoUeditor\\\\urls.py'> (None:None) ^ueditor/>"
+WARNING 2018-10-16 15:18:44,138 base 11504 5160 Not Found: /favicon.ico
+WARNING 2018-10-16 15:18:44,139 basehttp 11504 5160 "GET /favicon.ico HTTP/1.1" 404 2178
+DEBUG 2018-10-16 15:18:45,740 base 11504 788 Exception while resolving variable 'msg' in template 'demo/login.html'.
+Traceback (most recent call last):
+  File "D:\py-django\lib\site-packages\django\template\base.py", line 882, in _resolve_lookup
+    current = current[bit]
+  File "D:\py-django\lib\site-packages\django\template\context.py", line 87, in __getitem__
+    raise KeyError(key)
+KeyError: 'msg'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\py-django\lib\site-packages\django\template\base.py", line 888, in _resolve_lookup
+    if isinstance(current, BaseContext) and getattr(type(current), bit):
+AttributeError: type object 'RequestContext' has no attribute 'msg'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\py-django\lib\site-packages\django\template\base.py", line 896, in _resolve_lookup
+    current = current[int(bit)]
+ValueError: invalid literal for int() with base 10: 'msg'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\py-django\lib\site-packages\django\template\base.py", line 903, in _resolve_lookup
+    (bit, current))  # missing attribute
+django.template.base.VariableDoesNotExist: Failed lookup for key [msg] in "[{'True': True, 'False': False, 'None': None}, {'csrf_token': <SimpleLazyObject: <function csrf.<locals>._get_val at 0x000002A132CA42F0>>, 'request': <WSGIRequest: GET '/demo/login/'>, 'user': <SimpleLazyObject: <function AuthenticationMiddleware.process_request.<locals>.<lambda> at 0x000002A132C4FAE8>>, 'perms': <django.contrib.auth.context_processors.PermWrapper object at 0x000002A132C711D0>, 'messages': <django.contrib.messages.storage.fallback.FallbackStorage object at 0x000002A132C1F588>, 'DEFAULT_MESSAGE_LEVELS': {'DEBUG': 10, 'INFO': 20, 'SUCCESS': 25, 'WARNING': 30, 'ERROR': 40}}, {}]"
+INFO 2018-10-16 15:18:45,743 basehttp 11504 788 "GET /demo/login/ HTTP/1.1" 200 7438
+INFO 2018-10-16 15:18:45,800 basehttp 11504 11824 "GET /static/demo/css/login.css HTTP/1.1" 304 0
+INFO 2018-10-16 15:18:45,830 basehttp 11504 9688 "GET /demo/code/ HTTP/1.1" 200 1633
+DEBUG 2018-10-16 15:18:50,320 utils 11504 4932 (0.000) SELECT @@SQL_AUTO_IS_NULL; args=None
+DEBUG 2018-10-16 15:18:50,321 utils 11504 4932 (0.000) SELECT VERSION(); args=None
+DEBUG 2018-10-16 15:18:50,340 utils 11504 4932 (0.015) SELECT `demo_user`.`id`, `demo_user`.`username`, `demo_user`.`password`, `demo_user`.`age`, `demo_user`.`nickname`, `demo_user`.`email`, `demo_user`.`gender`, `demo_user`.`header` FROM `demo_user` WHERE (`demo_user`.`username` = 'laohe1' AND `demo_user`.`password` = '6fb93bb71b59bdd43a241a5299051909'); args=('laohe1', '6fb93bb71b59bdd43a241a5299051909')
+INFO 2018-10-16 15:18:50,343 basehttp 11504 4932 "POST /demo/login/ HTTP/1.1" 302 0
+WARNING 2018-10-16 15:18:50,348 views 11504 756 首页开始运行了……
+DEBUG 2018-10-16 15:18:50,355 utils 11504 756 (0.001) SELECT @@SQL_AUTO_IS_NULL; args=None
+DEBUG 2018-10-16 15:18:50,365 utils 11504 756 (0.010) SELECT `demo_article`.`id`, `demo_article`.`title`, `demo_article`.`content`, `demo_article`.`publishtime`, `demo_article`.`modifyTime`, `demo_article`.`author_id` FROM `demo_article`; args=()
+DEBUG 2018-10-16 15:18:51,268 utils 11504 4764 (0.001) SELECT @@SQL_AUTO_IS_NULL; args=None
+DEBUG 2018-10-16 15:18:51,270 utils 11504 4764 (0.000) SELECT VERSION(); args=None
+DEBUG 2018-10-16 15:18:51,276 utils 11504 4764 (0.001) SELECT `demo_user`.`id`, `demo_user`.`username`, `demo_user`.`password`, `demo_user`.`age`, `demo_user`.`nickname`, `demo_user`.`email`, `demo_user`.`gender`, `demo_user`.`header` FROM `demo_user` WHERE (`demo_user`.`username` = 'laohe1' AND `demo_user`.`password` = '6fb93bb71b59bdd43a241a5299051909'); args=('laohe1', '6fb93bb71b59bdd43a241a5299051909')
+INFO 2018-10-16 15:18:51,279 basehttp 11504 4764 "POST /demo/login/ HTTP/1.1" 302 0
+WARNING 2018-10-16 15:18:51,293 views 11504 2764 首页开始运行了……
+DEBUG 2018-10-16 15:18:51,319 utils 11504 2764 (0.000) SELECT @@SQL_AUTO_IS_NULL; args=None
+DEBUG 2018-10-16 15:18:51,322 utils 11504 2764 (0.002) SELECT `demo_article`.`id`, `demo_article`.`title`, `demo_article`.`content`, `demo_article`.`publishtime`, `demo_article`.`modifyTime`, `demo_article`.`author_id` FROM `demo_article`; args=()
+INFO 2018-10-16 15:18:53,551 basehttp 11504 2764 "GET /demo/index/ HTTP/1.1" 200 19836
+INFO 2018-10-16 15:18:53,558 basehttp 11504 756 "GET /demo/index/ HTTP/1.1" 200 19836
+ERROR 2018-10-16 15:18:53,601 basehttp 11504 756 "GET /demo/index/ HTTP/1.1" 500 59
+INFO 2018-10-16 15:19:04,391 basehttp 11504 3808 "GET /demo/logout/ HTTP/1.1" 302 0
+DEBUG 2018-10-16 15:19:04,401 base 11504 4920 Exception while resolving variable 'page' in template 'demo/show_index.html'.
+Traceback (most recent call last):
+  File "D:\py-django\lib\site-packages\django\template\base.py", line 882, in _resolve_lookup
+    current = current[bit]
+  File "D:\py-django\lib\site-packages\django\template\context.py", line 87, in __getitem__
+    raise KeyError(key)
+KeyError: 'page'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\py-django\lib\site-packages\django\template\base.py", line 888, in _resolve_lookup
+    if isinstance(current, BaseContext) and getattr(type(current), bit):
+AttributeError: type object 'RequestContext' has no attribute 'page'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\py-django\lib\site-packages\django\template\base.py", line 896, in _resolve_lookup
+    current = current[int(bit)]
+ValueError: invalid literal for int() with base 10: 'page'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\py-django\lib\site-packages\django\template\base.py", line 903, in _resolve_lookup
+    (bit, current))  # missing attribute
+django.template.base.VariableDoesNotExist: Failed lookup for key [page] in '[{\'True\': True, \'False\': False, \'None\': None}, {\'csrf_token\': <SimpleLazyObject: <function csrf.<locals>._get_val at 0x000002A132CA4F28>>, \'request\': <WSGIRequest: GET \'/demo/show_index/\'>, \'user\': <SimpleLazyObject: <function AuthenticationMiddleware.process_request.<locals>.<lambda> at 0x000002A132CA4D08>>, \'perms\': <django.contrib.auth.context_processors.PermWrapper object at 0x000002A1334CCA58>, \'messages\': <django.contrib.messages.storage.fallback.FallbackStorage object at 0x000002A1334CC438>, \'DEFAULT_MESSAGE_LEVELS\': {\'DEBUG\': 10, \'INFO\': 20, \'SUCCESS\': 25, \'WARNING\': 30, \'ERROR\': 40}}, {}, {\'block\': <Block Node: show_article. Contents: [<TextNode: \'\\n<div class="container">\\n\'>, <For Node: for at in page.object_list, tail_len: 9>, <TextNode: \'\\n                    </di\'>, <IfNode>, <TextNode: \'\\n\\n                       \'>, <IfNode>, <TextNode: \'\\n\\n                       \'>, <For Node: for p in page.paginator.page_range, tail_len: 5>, <TextNode: \'\\n\\n                       \'>, <IfNode>, <TextNode: \'\\n                        \'>, <IfNode>, <TextNode: \'\\n                      </\'>]>}, {}]'
+DEBUG 2018-10-16 15:19:04,405 base 11504 4920 Exception while resolving variable 'page' in template 'demo/show_index.html'.
+Traceback (most recent call last):
+  File "D:\py-django\lib\site-packages\django\template\base.py", line 882, in _resolve_lookup
+    current = current[bit]
+  File "D:\py-django\lib\site-packages\django\template\context.py", line 87, in __getitem__
+    raise KeyError(key)
+KeyError: 'page'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\py-django\lib\site-packages\django\template\base.py", line 888, in _resolve_lookup
+    if isinstance(current, BaseContext) and getattr(type(current), bit):
+AttributeError: type object 'RequestContext' has no attribute 'page'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\py-django\lib\site-packages\django\template\base.py", line 896, in _resolve_lookup
+    current = current[int(bit)]
+ValueError: invalid literal for int() with base 10: 'page'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\py-django\lib\site-packages\django\template\base.py", line 903, in _resolve_lookup
+    (bit, current))  # missing attribute
+django.template.base.VariableDoesNotExist: Failed lookup for key [page] in '[{\'True\': True, \'False\': False, \'None\': None}, {\'csrf_token\': <SimpleLazyObject: <function csrf.<locals>._get_val at 0x000002A132CA4F28>>, \'request\': <WSGIRequest: GET \'/demo/show_index/\'>, \'user\': <SimpleLazyObject: <function AuthenticationMiddleware.process_request.<locals>.<lambda> at 0x000002A132CA4D08>>, \'perms\': <django.contrib.auth.context_processors.PermWrapper object at 0x000002A1334CCA58>, \'messages\': <django.contrib.messages.storage.fallback.FallbackStorage object at 0x000002A1334CC438>, \'DEFAULT_MESSAGE_LEVELS\': {\'DEBUG\': 10, \'INFO\': 20, \'SUCCESS\': 25, \'WARNING\': 30, \'ERROR\': 40}}, {}, {\'block\': <Block Node: show_article. Contents: [<TextNode: \'\\n<div class="container">\\n\'>, <For Node: for at in page.object_list, tail_len: 9>, <TextNode: \'\\n                    </di\'>, <IfNode>, <TextNode: \'\\n\\n                       \'>, <IfNode>, <TextNode: \'\\n\\n                       \'>, <For Node: for p in page.paginator.page_range, tail_len: 5>, <TextNode: \'\\n\\n                       \'>, <IfNode>, <TextNode: \'\\n                        \'>, <IfNode>, <TextNode: \'\\n                      </\'>]>}]'
+DEBUG 2018-10-16 15:19:04,408 base 11504 4920 Exception while resolving variable 'page' in template 'demo/show_index.html'.
+Traceback (most recent call last):
+  File "D:\py-django\lib\site-packages\django\template\base.py", line 882, in _resolve_lookup
+    current = current[bit]
+  File "D:\py-django\lib\site-packages\django\template\context.py", line 87, in __getitem__
+    raise KeyError(key)
+KeyError: 'page'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\py-django\lib\site-packages\django\template\base.py", line 888, in _resolve_lookup
+    if isinstance(current, BaseContext) and getattr(type(current), bit):
+AttributeError: type object 'RequestContext' has no attribute 'page'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\py-django\lib\site-packages\django\template\base.py", line 896, in _resolve_lookup
+    current = current[int(bit)]
+ValueError: invalid literal for int() with base 10: 'page'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\py-django\lib\site-packages\django\template\base.py", line 903, in _resolve_lookup
+    (bit, current))  # missing attribute
+django.template.base.VariableDoesNotExist: Failed lookup for key [page] in '[{\'True\': True, \'False\': False, \'None\': None}, {\'csrf_token\': <SimpleLazyObject: <function csrf.<locals>._get_val at 0x000002A132CA4F28>>, \'request\': <WSGIRequest: GET \'/demo/show_index/\'>, \'user\': <SimpleLazyObject: <function AuthenticationMiddleware.process_request.<locals>.<lambda> at 0x000002A132CA4D08>>, \'perms\': <django.contrib.auth.context_processors.PermWrapper object at 0x000002A1334CCA58>, \'messages\': <django.contrib.messages.storage.fallback.FallbackStorage object at 0x000002A1334CC438>, \'DEFAULT_MESSAGE_LEVELS\': {\'DEBUG\': 10, \'INFO\': 20, \'SUCCESS\': 25, \'WARNING\': 30, \'ERROR\': 40}}, {}, {\'block\': <Block Node: show_article. Contents: [<TextNode: \'\\n<div class="container">\\n\'>, <For Node: for at in page.object_list, tail_len: 9>, <TextNode: \'\\n                    </di\'>, <IfNode>, <TextNode: \'\\n\\n                       \'>, <IfNode>, <TextNode: \'\\n\\n                       \'>, <For Node: for p in page.paginator.page_range, tail_len: 5>, <TextNode: \'\\n\\n                       \'>, <IfNode>, <TextNode: \'\\n                        \'>, <IfNode>, <TextNode: \'\\n                      </\'>]>}]'
+DEBUG 2018-10-16 15:19:04,410 base 11504 4920 Exception while resolving variable 'page' in template 'demo/show_index.html'.
+Traceback (most recent call last):
+  File "D:\py-django\lib\site-packages\django\template\base.py", line 882, in _resolve_lookup
+    current = current[bit]
+  File "D:\py-django\lib\site-packages\django\template\context.py", line 87, in __getitem__
+    raise KeyError(key)
+KeyError: 'page'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\py-django\lib\site-packages\django\template\base.py", line 888, in _resolve_lookup
+    if isinstance(current, BaseContext) and getattr(type(current), bit):
+AttributeError: type object 'RequestContext' has no attribute 'page'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\py-django\lib\site-packages\django\template\base.py", line 896, in _resolve_lookup
+    current = current[int(bit)]
+ValueError: invalid literal for int() with base 10: 'page'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\py-django\lib\site-packages\django\template\base.py", line 903, in _resolve_lookup
+    (bit, current))  # missing attribute
+django.template.base.VariableDoesNotExist: Failed lookup for key [page] in '[{\'True\': True, \'False\': False, \'None\': None}, {\'csrf_token\': <SimpleLazyObject: <function csrf.<locals>._get_val at 0x000002A132CA4F28>>, \'request\': <WSGIRequest: GET \'/demo/show_index/\'>, \'user\': <SimpleLazyObject: <function AuthenticationMiddleware.process_request.<locals>.<lambda> at 0x000002A132CA4D08>>, \'perms\': <django.contrib.auth.context_processors.PermWrapper object at 0x000002A1334CCA58>, \'messages\': <django.contrib.messages.storage.fallback.FallbackStorage object at 0x000002A1334CC438>, \'DEFAULT_MESSAGE_LEVELS\': {\'DEBUG\': 10, \'INFO\': 20, \'SUCCESS\': 25, \'WARNING\': 30, \'ERROR\': 40}}, {}, {\'block\': <Block Node: show_article. Contents: [<TextNode: \'\\n<div class="container">\\n\'>, <For Node: for at in page.object_list, tail_len: 9>, <TextNode: \'\\n                    </di\'>, <IfNode>, <TextNode: \'\\n\\n                       \'>, <IfNode>, <TextNode: \'\\n\\n                       \'>, <For Node: for p in page.paginator.page_range, tail_len: 5>, <TextNode: \'\\n\\n                       \'>, <IfNode>, <TextNode: \'\\n                        \'>, <IfNode>, <TextNode: \'\\n                      </\'>]>}, {}]'
+DEBUG 2018-10-16 15:19:04,413 base 11504 4920 Exception while resolving variable 'page' in template 'demo/show_index.html'.
+Traceback (most recent call last):
+  File "D:\py-django\lib\site-packages\django\template\base.py", line 882, in _resolve_lookup
+    current = current[bit]
+  File "D:\py-django\lib\site-packages\django\template\context.py", line 87, in __getitem__
+    raise KeyError(key)
+KeyError: 'page'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\py-django\lib\site-packages\django\template\base.py", line 888, in _resolve_lookup
+    if isinstance(current, BaseContext) and getattr(type(current), bit):
+AttributeError: type object 'RequestContext' has no attribute 'page'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\py-django\lib\site-packages\django\template\base.py", line 896, in _resolve_lookup
+    current = current[int(bit)]
+ValueError: invalid literal for int() with base 10: 'page'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\py-django\lib\site-packages\django\template\base.py", line 903, in _resolve_lookup
+    (bit, current))  # missing attribute
+django.template.base.VariableDoesNotExist: Failed lookup for key [page] in '[{\'True\': True, \'False\': False, \'None\': None}, {\'csrf_token\': <SimpleLazyObject: <function csrf.<locals>._get_val at 0x000002A132CA4F28>>, \'request\': <WSGIRequest: GET \'/demo/show_index/\'>, \'user\': <SimpleLazyObject: <function AuthenticationMiddleware.process_request.<locals>.<lambda> at 0x000002A132CA4D08>>, \'perms\': <django.contrib.auth.context_processors.PermWrapper object at 0x000002A1334CCA58>, \'messages\': <django.contrib.messages.storage.fallback.FallbackStorage object at 0x000002A1334CC438>, \'DEFAULT_MESSAGE_LEVELS\': {\'DEBUG\': 10, \'INFO\': 20, \'SUCCESS\': 25, \'WARNING\': 30, \'ERROR\': 40}}, {}, {\'block\': <Block Node: show_article. Contents: [<TextNode: \'\\n<div class="container">\\n\'>, <For Node: for at in page.object_list, tail_len: 9>, <TextNode: \'\\n                    </di\'>, <IfNode>, <TextNode: \'\\n\\n                       \'>, <IfNode>, <TextNode: \'\\n\\n                       \'>, <For Node: for p in page.paginator.page_range, tail_len: 5>, <TextNode: \'\\n\\n                       \'>, <IfNode>, <TextNode: \'\\n                        \'>, <IfNode>, <TextNode: \'\\n                      </\'>]>}]'
+DEBUG 2018-10-16 15:19:04,416 base 11504 4920 Exception while resolving variable 'page' in template 'demo/show_index.html'.
+Traceback (most recent call last):
+  File "D:\py-django\lib\site-packages\django\template\base.py", line 882, in _resolve_lookup
+    current = current[bit]
+  File "D:\py-django\lib\site-packages\django\template\context.py", line 87, in __getitem__
+    raise KeyError(key)
+KeyError: 'page'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\py-django\lib\site-packages\django\template\base.py", line 888, in _resolve_lookup
+    if isinstance(current, BaseContext) and getattr(type(current), bit):
+AttributeError: type object 'RequestContext' has no attribute 'page'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\py-django\lib\site-packages\django\template\base.py", line 896, in _resolve_lookup
+    current = current[int(bit)]
+ValueError: invalid literal for int() with base 10: 'page'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\py-django\lib\site-packages\django\template\base.py", line 903, in _resolve_lookup
+    (bit, current))  # missing attribute
+django.template.base.VariableDoesNotExist: Failed lookup for key [page] in '[{\'True\': True, \'False\': False, \'None\': None}, {\'csrf_token\': <SimpleLazyObject: <function csrf.<locals>._get_val at 0x000002A132CA4F28>>, \'request\': <WSGIRequest: GET \'/demo/show_index/\'>, \'user\': <SimpleLazyObject: <function AuthenticationMiddleware.process_request.<locals>.<lambda> at 0x000002A132CA4D08>>, \'perms\': <django.contrib.auth.context_processors.PermWrapper object at 0x000002A1334CCA58>, \'messages\': <django.contrib.messages.storage.fallback.FallbackStorage object at 0x000002A1334CC438>, \'DEFAULT_MESSAGE_LEVELS\': {\'DEBUG\': 10, \'INFO\': 20, \'SUCCESS\': 25, \'WARNING\': 30, \'ERROR\': 40}}, {}, {\'block\': <Block Node: show_article. Contents: [<TextNode: \'\\n<div class="container">\\n\'>, <For Node: for at in page.object_list, tail_len: 9>, <TextNode: \'\\n                    </di\'>, <IfNode>, <TextNode: \'\\n\\n                       \'>, <IfNode>, <TextNode: \'\\n\\n                       \'>, <For Node: for p in page.paginator.page_range, tail_len: 5>, <TextNode: \'\\n\\n                       \'>, <IfNode>, <TextNode: \'\\n                        \'>, <IfNode>, <TextNode: \'\\n                      </\'>]>}]'
+INFO 2018-10-16 15:19:04,419 basehttp 11504 4920 "GET /demo/show_index/ HTTP/1.1" 200 10149
+DEBUG 2018-10-16 15:19:05,877 base 11504 2196 Exception while resolving variable 'msg' in template 'demo/login.html'.
+Traceback (most recent call last):
+  File "D:\py-django\lib\site-packages\django\template\base.py", line 882, in _resolve_lookup
+    current = current[bit]
+  File "D:\py-django\lib\site-packages\django\template\context.py", line 87, in __getitem__
+    raise KeyError(key)
+KeyError: 'msg'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\py-django\lib\site-packages\django\template\base.py", line 888, in _resolve_lookup
+    if isinstance(current, BaseContext) and getattr(type(current), bit):
+AttributeError: type object 'RequestContext' has no attribute 'msg'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\py-django\lib\site-packages\django\template\base.py", line 896, in _resolve_lookup
+    current = current[int(bit)]
+ValueError: invalid literal for int() with base 10: 'msg'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\py-django\lib\site-packages\django\template\base.py", line 903, in _resolve_lookup
+    (bit, current))  # missing attribute
+django.template.base.VariableDoesNotExist: Failed lookup for key [msg] in "[{'True': True, 'False': False, 'None': None}, {'csrf_token': <SimpleLazyObject: <function csrf.<locals>._get_val at 0x000002A132CA4E18>>, 'request': <WSGIRequest: GET '/demo/login/'>, 'user': <SimpleLazyObject: <function AuthenticationMiddleware.process_request.<locals>.<lambda> at 0x000002A131714F28>>, 'perms': <django.contrib.auth.context_processors.PermWrapper object at 0x000002A1334CFC18>, 'messages': <django.contrib.messages.storage.fallback.FallbackStorage object at 0x000002A1334CFB70>, 'DEFAULT_MESSAGE_LEVELS': {'DEBUG': 10, 'INFO': 20, 'SUCCESS': 25, 'WARNING': 30, 'ERROR': 40}}, {}]"
+INFO 2018-10-16 15:19:05,882 basehttp 11504 2196 "GET /demo/login/ HTTP/1.1" 200 7438
+INFO 2018-10-16 15:19:05,954 basehttp 11504 2216 "GET /demo/code/ HTTP/1.1" 200 2873
+DEBUG 2018-10-16 15:19:09,518 utils 11504 504 (0.000) SELECT @@SQL_AUTO_IS_NULL; args=None
+DEBUG 2018-10-16 15:19:09,519 utils 11504 504 (0.000) SELECT VERSION(); args=None
+DEBUG 2018-10-16 15:19:09,526 utils 11504 504 (0.001) SELECT `demo_user`.`id`, `demo_user`.`username`, `demo_user`.`password`, `demo_user`.`age`, `demo_user`.`nickname`, `demo_user`.`email`, `demo_user`.`gender`, `demo_user`.`header` FROM `demo_user` WHERE (`demo_user`.`username` = 'laohe1' AND `demo_user`.`password` = '6fb93bb71b59bdd43a241a5299051909'); args=('laohe1', '6fb93bb71b59bdd43a241a5299051909')
+INFO 2018-10-16 15:19:09,530 basehttp 11504 504 "POST /demo/login/ HTTP/1.1" 302 0
+WARNING 2018-10-16 15:19:09,535 views 11504 9312 首页开始运行了……
+DEBUG 2018-10-16 15:19:09,540 utils 11504 9312 (0.000) SELECT @@SQL_AUTO_IS_NULL; args=None
+DEBUG 2018-10-16 15:19:09,543 utils 11504 9312 (0.002) SELECT `demo_article`.`id`, `demo_article`.`title`, `demo_article`.`content`, `demo_article`.`publishtime`, `demo_article`.`modifyTime`, `demo_article`.`author_id` FROM `demo_article`; args=()
+INFO 2018-10-16 15:19:09,553 basehttp 11504 9312 "GET /demo/index/ HTTP/1.1" 200 19836
+WARNING 2018-10-16 15:26:49,409 base 744 9068 Not Found: /2_20181016152649_475.jpg
+WARNING 2018-10-16 15:26:49,411 basehttp 744 9068 "GET /2_20181016152649_475.jpg HTTP/1.1" 404 2217
+WARNING 2018-10-16 15:27:01,267 views 744 1320 首页开始运行了……
+WARNING 2018-10-16 15:27:53,438 base 744 10104 Not Found: /3_20181016152753_430.jpg
+WARNING 2018-10-16 15:27:53,440 basehttp 744 10104 "GET /3_20181016152753_430.jpg HTTP/1.1" 404 2217

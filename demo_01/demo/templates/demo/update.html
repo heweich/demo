@@ -1,0 +1,215 @@
+
+{% extends 'base.html' %}
+
+{% block title %}
+写文章
+{% endblock %}
+
+{% block self_css %}
+<link rel="stylesheet" href="/static/demo/css/author_info.css">
+{% endblock %}
+
+{% block lb_picture %}
+
+{% endblock %}
+{% block bloger_info %}
+{%  endblock %}
+{% block show_article %}
+<div class="container">
+    <form action="/demo/{{user.id}}/update/" method="post" enctype="multipart/form-data">
+    <div class="col-lg-3 col-lg-offset-1">
+        {% csrf_token %}
+        <!-- Nav tabs -->
+        <ul class="nav navbar" role="tablist">
+            <li role="presentation" class="active"><a href="#home" aria-controls="home" role="tab" data-toggle="tab"><span class="glyphicon glyphicon-th-list"></span> 基础设置</a></li>
+            <li role="presentation"><a href="#profile" aria-controls="profile" role="tab" data-toggle="tab"><span class="glyphicon glyphicon-user"></span> 个人资料</a></li>
+            <li role="presentation"><a href="#messages" aria-controls="messages" role="tab" data-toggle="tab"><span class="glyphicon glyphicon-modal-window"></span> 修改密码</a></li>
+            <li role="presentation"><a href="#settings" aria-controls="settings" role="tab" data-toggle="tab"><span class="glyphicon glyphicon-remove-circle"></span> 黑名单</a></li>
+            <li role="presentation"><a href="#settings1" aria-controls="settings1" role="tab" data-toggle="tab"><span class="glyphicon glyphicon-bitcoin"></span> 赞赏设置</a></li>
+            <li role="presentation"><a href="#settings2" aria-controls="settings2" role="tab" data-toggle="tab"><span class="glyphicon glyphicon-cog"></span> 账号管理</a></li>
+        </ul>
+    </div>
+
+        <!-- Tab panes -->
+    <div class="col-lg-8">
+        <!--111111111111111111111111111111111111111111111111111111-->
+        <div class="tab-content">
+            <div role="tabpanel" class="tab-pane active" id="home">
+                <table class="table">
+                    <thead>
+                        <td><img class="img-circle" src="/{{user.header}}" id="img1" style="width:130px;height:130px"></td>
+                        <td><button class="col-lg-offset-2 ">更换头像</button></td>
+                        <td><input type="file" class="form-control"  name="avatar" id="avatar" ></td>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>昵称</td>
+                            <td><input class="" value="{{user.nickname}}" name="nickname"></td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td>年龄</td>
+                            <td><input class="" value="{{user.age}}" name="age"></td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td>电子邮件</td>
+                            <td><input class="" value="{{user.email}}" name="email"></td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td>手机</td>
+                            <td>184****9216</td>
+                            <td><span class="glyphicon glyphicon-ok"></span> 已绑定</td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td>常用编辑器</td>
+                            <td><input type="radio" name="a" class="">富文本编辑器</td>
+                            <td><input type="radio" name="a" class="">MarkDown</td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td>语言设置</td>
+                            <td><input type="radio" name="b" class="">中文简体</td>
+                            <td><input type="radio" name="b" class="">中文繁体</td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td>接受谁的简信</td>
+                            <td><input type="radio" name="c" class="">所有人</td>
+                            <td><input type="radio" name="c" class="">我关注的人</td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td>提醒邮件通知</td>
+                            <td><input type="radio" name="d" class="">所有动态</td>
+                            <td><input type="radio" name="d" class="">每天未读汇总</td>
+                            <td><input type="radio" name="d">不接收</td>
+                        </tr>
+                    </tbody>
+                </table>
+                <button>保存</button>
+            </div>
+            <!--2222222222222222222222222222222222222222222222222-->
+            <div role="tabpanel" class="tab-pane" id="profile">
+                <table class="table">
+                    <thead>
+                    <tr>
+                        <td>性别</td>
+                        <td>
+                            <input type="text" readonly value="{{user.gender}}" >
+                        </td>
+                    </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>个人简介</td>
+                            <td><form><textarea placeholder="填写您的个人简介"></textarea> </form></td>
+                        </tr>
+                        <tr>
+                            <td>个人网址</td>
+                            <td><input type="text" class="wangzhi" placeholder="http://你的网址"><a class="col-lg-offset-1">填写后会在个人主页显示图标</a></td>
+                        </tr>
+                        <tr>
+                            <td>微信二维码</td>
+                            <td><button class="btn-primary">更换图片</button><a class="col-lg-offset-5">上传后会在个人主页显示图标</a></td>
+                        </tr>
+                        <tr>
+                            <td>社交账号</td>
+                            <td>
+                                <p>你可以通过绑定的社交帐号登录简书。出于安全因素, 你最初用来创建账户的社交帐号不能移除。</p>
+                                <p>如果帐号被占用，你可以在<a href="#">简书帐号绑定解绑相关问题汇总</a>中获得相关帮助。</p>
+                                <ul id="images">
+                                    <li><img src="/static/demo/image/headers/QQ.png"><a href="#" class="col-lg-offset-1">QQ绑定</a></li><hr>
+                                    <li><img src="/static/demo/image/headers/weixin.png"><a href="#" class="col-lg-offset-1">微信绑定</a> </li><hr>
+                                    <li><img src="/static/demo/image/headers/weibo.png"><a href="#" class="col-lg-offset-1">微博绑定</a> </li>
+                                </ul>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+                <button class="btn-success" id="baocun">保存</button>
+            </div>
+            <!--</form>-->
+            <!--33333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333-->
+            <div role="tabpanel" class="tab-pane col-sm-8" id="messages">
+                <form>
+                <div class="form-horizontal" style="margin-top:70px">
+                    <div id="msg">{{msg}}</div>
+                    {% csrf_token %}
+                    <div class="form-group">
+                        <label for="inputPassword3" class="col-sm-2 control-label">原密码</label>
+                        <div class="col-sm-10">
+                            <input type="text" name="pwd" id="pwd" class="form-control" placeholder="password">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="inputPassword3" class="col-sm-2 control-label">现密码</label>
+                        <div class="col-sm-10">
+                            <input type="text" class="form-control" id="n_pwd" name="n_pwd" placeholder="now possword">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="inputPassword3" class="col-sm-2 control-label">确认密码</label>
+                        <div class="col-sm-10">
+                            <input type="text" class="form-control" name="c_pwd" id="c_pwd" placeholder="Password">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <div class="col-sm-offset-2 col-sm-10">
+                            <button type="button" class="btn btn-default" onclick="xg_password()">确认修改</button>
+                        </div>
+                    </div>
+                </div>
+                </form>
+            </div>
+            <div role="tabpanel" class="tab-pane" id="settings">4</div>
+            <div role="tabpanel" class="tab-pane" id="settings1">5</div>
+            <div role="tabpanel" class="tab-pane" id="settings2">6</div>
+        </div>
+    </div>
+    </form>
+</div>
+{% endblock %}
+{% block bottom %}
+<script>
+    function xg_password() {
+        pwd = $("#pwd").val();
+        n_pwd = $("#n_pwd").val();
+        c_pwd = $("#c_pwd").val();
+        console.log(pwd,c_pwd,n_pwd);
+
+        $.ajax({
+            url: "/demo/{{user.id}}/change_password/",
+            method: "POST",
+            data: {"pwd": pwd, "n_pwd": n_pwd, "c_pwd": c_pwd, "csrfmiddlewaretoken": "{{ csrf_token }}"},
+            dataType: "json",
+            success: function (data) {
+                if (data.success) {
+                    console.log("11111111111");
+                    $("#msg").html("<span style='color:green'>"+ data.msg +"</span>");
+                    $("#pwd").val("");
+                    $("#n_pwd").val("");
+                    $("#c_pwd").val("");
+                    console.log(data.msg);
+
+                    //演示前端跳转页面
+                    // window.location.pathname = "/demo/index/"
+
+                } else {
+                    window.location.pathname = "/demo/login/"
+                }
+            }
+
+        })
+
+
+    }
+
+
+</script>
+{% endblock %}

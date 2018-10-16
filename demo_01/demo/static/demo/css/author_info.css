@@ -1,0 +1,72 @@
+.container ul >li {
+    color: black;
+    font-size: 16px;
+}
+.container ul{
+    padding-top:50px
+}
+#home table tr td{
+    padding: 20px 0;
+}
+#home button{
+    width: 80px;
+    height: 30px;
+    color:#42c02e;
+    background-color: white;
+    border-radius: 5px;
+    border: solid 1px #42c02e;
+}
+#home thead button:nth-of-type(1){
+    margin-top: 90px;
+}
+#home button:hover{
+    background-color: #42c02e;
+    color: white;
+}
+#home tr td{
+    margin-top: 20px;
+    font-size: 15px;
+}
+#profile{
+    font-size: 15px;
+}
+#profile table tr td{
+    padding-bottom: 20px;
+    padding-top: 20px;
+}
+#profile .table form textarea{
+    width: 350px;
+    height: 100px;
+}
+#profile .table p{
+    font-size: 14px;
+    color: #888888;
+}
+#profile .wangzhi{
+    width: 350px;
+}
+#images{
+    list-style: none;
+}
+#images img{
+    width: 30px;
+    height: 30px;
+}
+#baocun{
+    display: block;
+    width: 100px;
+    height: 30px;
+    color:white;
+    background-color: #42c02e;
+    border-radius: 5px;
+    border: solid 1px green;
+    margin-top: -20px;
+}
+#img1{
+    width:130px;
+    height:130px;
+}
+
+#avatar{
+    width:100px;
+}

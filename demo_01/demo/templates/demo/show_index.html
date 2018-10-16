@@ -1,0 +1,62 @@
+{% extends 'base.html' %}
+
+{% block title %}
+主页
+{% endblock %}
+
+{% block login %}
+
+<li><a href="{% url 'demo:login' %}">登录</a></li>
+<li><a href="{% url 'demo:register' %}">注册</a></li>
+{% endblock %}
+{% block bloger_info %}
+<!--<button onclick="sendajax()">发送ajax</button>-->
+
+<script>
+    // function sendajax() {
+    //     var xhr = new XMLHttpRequest();
+    //     // 2.打开连接
+    //     xhr.open("POST","/demo/ajax_hello/?id=3&name=hwc",true);
+    //     xhr.onreadystatechange = function () {
+    //         //接收服务器返回的参数
+    //         if (xhr.readyState == 4 && xhr.status == 200){
+    //             console.log(xhr.responseText)
+    //         }
+    //     };
+    //     //4.发送请求
+    //     xhr.setRequestHeader("Content-type","application/x-www-form-urlencoded");
+    //     xhr.send("id=3&name=hwc");
+    //
+    // }
+    // function sendajax(options) {
+    //     var xhr = new XMLHttpRequest();
+    //     xhr.open(options.method,options.url,options.async);
+    //     xhr.onreadystatechang = options.success;
+    //     xhr.send();
+    // }
+    //
+    // sendajax({
+    //     method:"GET",
+    //     url:"demo/ajax_hello",
+    //     async:true,
+    //     success:function () {
+    //
+    //     }
+    // })
+    // function sendajax() {
+    //     $.ajax({
+    //         url:"/demo/ajax_hello/",
+    //         method:"POST",
+    //         data:{"id":1,"name":"hwc","csrfmiddlewaretoken":"{{ csrf_token }}"},
+    //         dataType:"json",
+    //         success:function (data) {
+    //             console.log(data)
+    //         },
+    //         error:function () {
+    //
+    //         },
+    //     })
+    // }
+</script>
+
+{% endblock %}

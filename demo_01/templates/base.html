@@ -1,0 +1,291 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>{% block title %}博客首页{% endblock %}</title>
+
+    <script src="/static/js/lib/jquery2.2.4/jquery-2.2.4.min.js"></script>
+    <script src="/static/js/lib/bootstrap-3.3.7-dist/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="/static/js/lib/bootstrap-3.3.7-dist/css/bootstrap.min.css">
+    <!--引入自己的css样式-->
+    <link rel="stylesheet" href="/static/demo/css/index.css">
+    {% block self_css %}
+    {% endblock %}
+</head>
+<body>
+{% block t_title %}
+<nav class="navbar navbar-fixed-top">
+    <div class="container-fluid bg-danger">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand title" href="#">简书</a>
+        </div>
+
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+            <ul class="nav navbar-nav">
+                <li class="active"><a href="#"><span class="glyphicon glyphicon-search"></span> 发现 <span class="sr-only">(current)</span></a></li>
+                <li><a href="#"><span class="glyphicon glyphicon-star-empty"></span> 关注</a></li>
+                <li class="dropdown">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">消息 <span class="caret"></span></a>
+                    <ul class="dropdown-menu">
+                        <li><a href="#"><span class="glyphicon glyphicon-pencil"></span> 评论</a></li>
+                        <li role="separator" class="divider"></li>
+                        <li><a href="#"><span class="glyphicon glyphicon-envelope"></span> 简信</a></li>
+                        <li role="separator" class="divider"></li>
+                        <li><a href="#"><span class="glyphicon glyphicon-edit"></span> 投稿请求</a></li>
+                        <li role="separator" class="divider"></li>
+                        <li><a href="#"><span class="glyphicon glyphicon-heart"></span> 喜欢和赞</a></li>
+                        <li role="separator" class="divider"></li>
+                        <li><a href="#"><span class="glyphicon glyphicon-star"></span> 关注</a></li>
+                        <li role="separator" class="divider"></li>
+                        <li><a href="#"><span class="glyphicon glyphicon-yen"></span> 赞赏和付费</a></li>
+                        <li role="separator" class="divider"></li>
+                        <li><a href="#"><span class="glyphicon glyphicon-option-horizontal"></span> 其他提醒</a></li>
+                    </ul>
+                </li>
+            </ul>
+            <form class="navbar-form navbar-left">
+                <div class="form-group">
+                    <input type="text" class="form-control" placeholder="Search">
+                </div>
+                <button type="submit" class="btn btn-default ">搜索</button>
+            </form>
+            <ul class="nav navbar-nav navbar-right" id="aa">
+              {% block login %}
+                <li><a href="#">欢迎您</a></li>
+                <li><a href="#">{{request.session.loginUser.nickname}}</a></li>
+                <li> <img src="/{{ request.session.loginUser.header }}" id="title_img" class="img-circle center-block" alt=""></li>
+                <li class="dropdown">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">更多 <span class="caret"></span></a>
+                    <ul class="dropdown-menu">
+                        <li><a href="{% url 'demo:index' %}"><span class="glyphicon glyphicon-user"></span> 我的主页</a></li>
+                        <li role="separator" class="divider"></li>
+                        <li><a href="{% url 'demo:self_article' %}"><span class="glyphicon glyphicon-bookmark"></span> 我的文章</a></li>
+                        <li role="separator" class="divider"></li>
+                        <li><a href="#"><span class="glyphicon glyphicon-heart"></span> 喜欢的文章</a></li>
+                        <li role="separator" class="divider"></li>
+                        <li><a href="#"><span class="glyphicon glyphicon-xbt"></span> 已购内容</a></li>
+                        <li role="separator" class="divider"></li>
+                        <li><a href="#"><span class="glyphicon glyphicon-modal-window"></span> 我的钱包</a></li>
+                        <li role="separator" class="divider"></li>
+                        <li><a href="author_info.html"><span class="glyphicon glyphicon-wrench"></span> 设置</a></li>
+                        <li role="separator" class="divider"></li>
+                        <li><a href="#"><span class="glyphicon glyphicon-comment"></span> 帮助与反馈</a></li>
+                        <li role="separator" class="divider"></li>
+                        <li><a href="{% url 'demo:logout' %}"><span class="glyphicon glyphicon-triangle-right"></span> 退出</a></li>
+                    </ul>
+                </li>
+                <li><a href="{% url 'demo:add_article' %}" id="write">写文章</a></li>
+              {% endblock %}
+            </ul>
+        </div><!-- /.navbar-collapse -->
+    </div><!-- /.container-fluid -->
+</nav>
+{% endblock %}
+<!--aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa-->
+{% block lb_picture %}
+<div class="container">
+    <div class="row">
+        <div class="col-lg-8">
+            <div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
+                <!--轮播图片的提示点-->
+
+                <!--轮播图片-->
+                <div class="carousel-inner" role="listbox">
+                    <ol class="carousel-indicators">
+                        <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
+                        <li data-target="#carousel-example-generic" data-slide-to="1"></li>
+                        <li data-target="#carousel-example-generic" data-slide-to="2"></li>
+                        <li data-target="#carousel-example-generic" data-slide-to="3"></li>
+                        <li data-target="#carousel-example-generic" data-slide-to="4"></li>
+                        <li data-target="#carousel-example-generic" data-slide-to="5"></li>
+                    </ol>
+                    <div class="item active ">
+                        <img src="/static/demo/image/banel/5.jpg" alt="1">
+                    </div>
+                    <div class="item ">
+                        <img src="/static/demo/image/banel/6.png" alt="2">
+                        <div class="carousel-caption"></div>
+                    </div>
+                    <div class="item ">
+                        <img src="/static/demo/image/banel/7.jpg" alt="3">
+                        <div class="carousel-caption"></div>
+                    </div>
+                    <div class="item ">
+                        <img src="/static/demo/image/banel/8.png" alt="3">
+                        <div class="carousel-caption"></div>
+                    </div>
+                    <div class="item ">
+                        <img src="/static/demo/image/banel/9.jpg" alt="3">
+                        <div class="carousel-caption"></div>
+                    </div>
+                    <div class="item ">
+                        <img src="/static/demo/image/banel/10.jpg" alt="3">
+                        <div class="carousel-caption"></div>
+                    </div>
+                </div>
+                <!--左右滑动图标-->
+                <a class="left carousel-control" href="#carousel-example-generic" role="button" data-slide="prev">
+                    <span class="glyphicon glyphicon-chevron-left" ></span>
+                    <span class="sr-only">Previous</span>
+                </a>
+                <a class="right carousel-control" href="#carousel-example-generic" role="button" data-slide="next">
+                    <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+                    <span class="sr-only">Next</span>
+                </a>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-lg-4" id="lie">
+                <p class="bg-danger">7日热门 <span class="glyphicon glyphicon-chevron-right"></span></p>
+                <p class="bg-primary">30日热门 <span class="glyphicon glyphicon-chevron-right"></span></p>
+                <p class="bg-info">优选连载 <span class="glyphicon glyphicon-chevron-right"></span></p>
+                <p class="bg-success">简书版权 <span class="glyphicon glyphicon-chevron-right"></span></p>
+                <p class="bg-warning">简书大学堂 <span class="glyphicon glyphicon-chevron-right"></span></p>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}
+{% block show_article %}
+<div class="container">
+    <div class="row">
+        <!-- 主要展示列，展示各项文章信息等 -->
+        <div class="col-md-8">
+            <!--<div class="page-header">-->
+            <!--<h3>热门文章 <small>这里能找到技术前沿的各位大神的文章内容</small></h3>-->
+            <!--</div>-->
+            <div class="row author-article">
+                <div class="tab-content">
+                    <div role="tabpanel" class="tab-pane active" id="home">
+                        {% for at in page.object_list %}
+                        <div class="media">
+                            <div class="media-body">
+                                <h4 class="media-heading"><a href="{% url 'demo:show_article' at.id %}">{{at.title}}</a></h4>
+                                {{at.content | safe}}
+                            </div>
+                            <div class="media-left media-middle">
+                                <a href="#">
+                                    <img class="media-object " src="/static/demo/image/articles/1.jpg" alt="图片">
+                                </a>
+                            </div>
+                            <div class="media-bottom text-muted">
+                                <span class="glyphicon glyphicon-eye-open">169</span>
+                                <span class="glyphicon glyphicon-comment">18</span>
+                                <span class="glyphicon glyphicon-heart">200</span>
+                                <span>&nbsp;{{at.publishtime}}</span>
+
+                            </div>
+                        </div>
+                        {% endfor %}
+                    </div>
+                    <nav aria-label="Page navigation">
+                      <ul class="pagination">
+                          {% if page.has_previous %}
+                           <li>
+                              <a href="/demo/index?page_now={{1}}">
+                                首页
+                              </a>
+                           </li>
+                          {% endif %}
+
+                          {% if page.has_previous %}
+                           <li>
+                              <a href="/demo/index?page_now={{page.previous_page_number}}" aria-label="Previous">
+                                <span aria-hidden="true">&laquo;</span>
+                              </a>
+                            </li>
+                          {% endif %}
+
+                          {% for p in page.paginator.page_range %}
+                            <li><a href="/demo/index/?page_now={{p}}">{{p}}</a></li>
+                          {% endfor %}
+
+                           {% if page.has_next %}
+                           <li>
+                               <a href="/demo/index?page_now={{page.next_page_number}}" aria-label="Next">
+                                   <span aria-hidden="true">&raquo;</span>
+                               </a>
+                            </li>
+                          {% endif %}
+                          {% if page.has_next %}
+                            <li>
+                               <a href="/demo/index?page_now={{ page.paginator.num_pages}}">
+                                   尾页
+                               </a>
+                            </li>
+                          {% endif %}
+                      </ul>
+                    </nav>
+                </div>
+            </div>
+        </div>
+    {% endblock %}
+    {% block bloger_info %}
+        <div class="col-lg-4">
+            <div class="panel panel-default blog-author">
+                <div class="panel-heading">博主信息</div>
+                <div class="panel-body">
+                    <img src="/{{ request.session.loginUser.header }}" id="bloger_img" class="img-circle center-block" alt="">
+                    <p class="text-muted text-center"><span>昵称：</span><strong>{{request.session.loginUser.nickname}}</strong></p>
+                    <p class="text-muted text-center"><span>年龄：</span><strong>{{request.session.loginUser.age}}</strong></p>
+                    <p class="text-muted text-center"><span>邮箱：</span><strong>{{request.session.loginUser.email}}</strong></p>
+                    <p class="text-muted text-center"><span>性别：</span><strong>{{request.session.loginUser.gender}}</strong></p>
+                    <a class="text-muted text-center" href="{% url 'demo:update' request.session.loginUser.id %}">点击修改</a>
+                  <a onclick="return window.confirm('您确定要删除这个用户吗？')" href="{% url 'demo:delete_user' request.session.loginUser.id %}">点击删除</a>
+                </div>
+            </div>
+
+            <div class="panel panel-default">
+                <div class="panel-heading">个人专题</div>
+                <ul class="list-group">
+                    <li class="list-group-item"><a href="#">专题名称</a></li>
+                    <li class="list-group-item"><a href="#">专题名称</a></li>
+                    <li class="list-group-item"><a href="#">专题名称</a></li>
+                    <li class="list-group-item"><a href="#">专题名称</a></li>
+                    <li class="list-group-item"><a href="#">专题名称</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-lg-4" id="lie2">
+                <p class="bg-danger"><img src="/static/demo/image/headers/11.jpg"> 三儿王宇<span class="glyphicon glyphicon-plus navbar-right">关注</span></p>
+                <p class="bg-primary"><img src="/static/demo/image/headers/12.png"> 阿特atter<span class="glyphicon glyphicon-plus navbar-right">关注</span></p>
+                <p class="bg-info"><img src="/static/demo/image/headers/13.jpg"> 一只支<span class="glyphicon glyphicon-plus navbar-right">关注</span></p>
+                <p class="bg-success"><img src="/static/demo/image/headers/14.jpg"> 我爱python<span class="glyphicon glyphicon-plus navbar-right">关注</span></p>
+                <p class="bg-warning"><img src="/static/demo/image/headers/15.jpg"> python爱我<span class="glyphicon glyphicon-plus navbar-right">关注</span></p>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="container">
+    <div class="row  col-lg-8">
+        <p>阅读更多</p>
+    </div>
+</div>
+{% endblock %}
+<!-- 页面底部 -->
+{% block bottom %}
+<div class="container">
+    <ul class="list-inline">
+        <li><a href="#">关于简书</a></li>
+        <li><a href="#">联系我们</a></li>
+        <li><a href="#">加入我们</a></li>
+        <li><a href="#">简书出版</a></li>
+        <li><a href="#">品牌与徽标</a></li>
+        <li><a href="#">帮助中心</a></li>
+        <li><a href="#">合作伙伴</a></li>
+    </ul>
+    <p class="text-muted">版权所有&copy;翻盘必究 公安网站备案编号342341234123512</p>
+</div>
+{% endblock %}
+</body>
+</html>

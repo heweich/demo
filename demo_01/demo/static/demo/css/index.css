@@ -1,0 +1,82 @@
+body{
+    padding: 70px;
+}
+.title{
+    color: #DA0000;
+    font-size: 23px;
+    font-weight: 800;
+    padding-left:30px;
+}
+#title_img{
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-size: 50px 50px;
+    margin-left: 20px;
+    margin-right: 5px;
+}
+#aa{
+    margin-right: 30px;
+}
+/*文章展示样式*/
+.author-article .nav-tabs {
+    margin-top: 30px;
+}
+.author-article .nav-tabs  a{
+    font-size: 19px;
+    font-weight: 700;
+    color: #888888;
+}
+.author-article .media img{
+    width: 200px;
+    height: auto;
+}
+.author-article .media{
+    margin: 10px 0 10px 0;
+    border-bottom: solid 1px #ddd;
+    padding: 20px;
+}
+
+.author-article .media .text-muted{
+    margin-top: -20px;
+}
+/*--------------------------*/
+#lie > p{
+    height: 58px;
+    padding-left: 30px;
+    line-height: 58px;
+    font-size: 20px;
+}
+#lie2 > p{
+    font-size: 16px;
+    margin-top: 15px;
+
+}
+#lie2 > p > img{
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    margin-left: 10px;
+}
+#lie2 > p >span{
+    line-height: 50px;
+    margin-right: 10px;
+}
+.row > p{
+    height: 40px;
+    background-color: #8e908c;
+    font-size: 16px;
+    color: white;
+    text-align: center;
+    line-height: 40px;
+    border-radius: 5px;
+}
+.row > p:hover{
+    background-color: #797979;
+}
+
+#bloger_img{
+    width:100px;
+    height:100px;
+
+}

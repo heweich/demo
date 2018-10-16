@@ -1,0 +1,43 @@
+{% extends 'base.html' %}
+
+{% block title %}
+写文章
+{% endblock %}
+
+{% block lb_picture %}
+
+{% endblock %}
+{% block bloger_info %}
+<div class="panel panel-primary">
+      <div class="panel-heading">
+          <h5>发表文章</h5>
+      </div>
+
+      <div class="panel-body">
+        <div style="color: red;">{{msg}}</div>
+        <form class="form-horizontal" action="/demo/{{at.id}}/update_article/" method="post">
+            {% csrf_token %}
+          <div class="form-group">
+            <div class="col-md-10 col-md-offset-1">
+              <input type="text" class="form-control" name="title" id="title" value="{{at.title}}">
+            </div>
+          </div>
+          <div class="form-group">
+            <div class="row">
+                <textarea class="col-md-10 col-md-offset-1" name="content" id="content" cols="30" rows="20">{{at.content}}</textarea>
+            </div>
+          </div>
+
+          <div class="form-group">
+            <div class="col-sm-offset-2 col-sm-10">
+              <button type="submit" class="btn btn-danger">确认修改</button>
+            </div>
+          </div>
+        </form>
+
+
+      </div>
+    </div>
+{%  endblock %}
+{% block show_article %}
+{% endblock %}

@@ -1,0 +1,47 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+#logo{
+    font-size: 50px;
+    font-weight: 800;color: #DA0000;
+    margin-top: 30px;
+    margin-left: 50px;
+}
+.row .login{
+    height: 530px;
+    width: 430px;
+    margin: auto;
+    background-color: white;
+    line-height: 30px;
+}
+.login  > ul{
+    padding-left: 170px;
+    padding-top: 50px;
+    margin:30px auto;
+}
+.form-horizontal .form-group:nth-of-type(1) input,.form-horizontal .form-group:nth-of-type(2) input{
+    height: 40px;
+    width: 300px;
+}
+.form-horizontal .form-group:nth-of-type(5) button{
+    width: 300px;
+    height: 40px;
+    font-size: 18px;
+    border-radius: 20px;
+    background-color: deepskyblue;
+    color: white;
+}
+.form-horizontal .form-group:nth-of-type(5) button:hover{
+    background-color:mediumblue;
+}
+#inputPassword4{
+    width: 300px;
+}
+#problem{
+    margin-left: 120px;
+}
+.tubiao li img{
+    width: 30px;
+    height: 30px;
+}

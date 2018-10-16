@@ -1,0 +1,47 @@
+
+{% extends 'base.html' %}
+
+{% block title %}
+查看自己发表的文章
+{% endblock %}
+
+{% block lb_picture %}
+{% endblock %}
+{% block show_article %}
+<!-- 主要展示列，展示各项文章信息等 -->
+<div class="col-md-8">
+    <!--<div class="page-header">-->
+    <!--<h3>热门文章 <small>这里能找到技术前沿的各位大神的文章内容</small></h3>-->
+    <!--</div>-->
+    <div class="row author-article">
+        <div class="tab-content">
+            <div role="tabpanel" class="tab-pane active" id="home">
+                {% for at in articles %}
+                <div class="media">
+                    <div class="media-body">
+                        <h4 class="media-heading"><a href="{% url 'demo:show_article' at.id %}">{{at.title}}</a></h4>
+                        {{at.content | safe}}
+                    </div>
+                    <div class="media-left media-middle">
+                        <a href="#">
+                            <img class="media-object " src="/static/demo/image/articles/1.jpg" alt="图片">
+                        </a>
+                    </div>
+                    <div class="media-bottom text-muted">
+                        <span class="glyphicon glyphicon-eye-open">169</span>
+                        <span class="glyphicon glyphicon-comment">18</span>
+                        <span class="glyphicon glyphicon-heart">200</span>
+                        <span>&nbsp;{{at.publishtime}}</span>
+                        <a href="{% url 'demo:update_article' at.id %}">修改文章</a>
+                        <a onclick="return window.confirm('您确定要删除这篇文章吗？')" href="{% url 'demo:delete_article' at.id %}">删除文章</a>
+
+                    </div>
+                </div>
+                {% endfor %}
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}
+<!--<a href="{% url 'demo:update_article' at.id %}">修改</a>-->
+<!--<a onclick="return window.confirm('您确定要删除这篇文章吗？')" href="{% url 'demo:delete_article' at.id %}">删除</a>-->
